@@ -54,6 +54,10 @@
             color: var(--gray-300);
         }
 
+        &.active {
+            font-weight: 700;
+        }
+
         &.active::after {
             content: "";
 

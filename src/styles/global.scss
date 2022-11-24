@@ -28,6 +28,16 @@ body {
     color: var(--gray-100);
 }
 
+
+body::-webkit-scrollbar {
+    width: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--gray-700);
+    border-radius: 20px;
+}
+
 button {
     cursor: pointer;
 }
