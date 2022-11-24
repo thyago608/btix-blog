@@ -24,8 +24,8 @@ body {
 }
 
 body {
-    background: #111;
-    color: #fff;
+    background: var(--gray-900);
+    color: var(--gray-100);
 }
 
 button {
