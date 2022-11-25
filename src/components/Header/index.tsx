@@ -20,9 +20,7 @@ export function Header() {
           </Link>
           <Link
             href="/posts"
-            className={
-              asPath === "/posts" ? styles.active : ""
-            }>
+            className={asPath !== "/" ? styles.active : ""}>
             Posts
           </Link>
         </nav>
