@@ -1,0 +1,29 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+
+    padding: 0 1rem;
+}
+
+.postList {
+    margin: 5rem 0;
+
+    .heading {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    .list {
+        margin-top: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    @media(min-width: 768px) {
+        .list {
+            margin-top: 4rem;
+        }
+    }
+}
