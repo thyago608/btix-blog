@@ -10,7 +10,7 @@ export default function Posts() {
         <title>btix.blog | post</title>
       </Head>
       <div className={styles.postSelected}>
-        <Post />
+        {/* <Post /> */}
       </div>
       <section className={styles.comments}>
         <header>
