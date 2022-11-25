@@ -1,0 +1,16 @@
+.footer {
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--gray-900);
+    color: var(--gray-100);
+
+    padding: 0 1rem;
+
+    p {
+        text-align: center;
+    }
+}
