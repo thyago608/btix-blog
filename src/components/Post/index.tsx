@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 export function Post() {
   return (
-    <Link href="/" className={styles.post}>
+    <Link href="/post/sunt" className={styles.post}>
       <strong className={styles.title}>
         sunt aut facere repellat provident occaecati
         excepturi optio reprehenderit

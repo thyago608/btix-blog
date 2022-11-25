@@ -9,8 +9,13 @@
     margin: 5rem 0;
 
     .heading {
+        max-width: 300px;
+        margin: 0 auto;
         text-align: center;
         font-size: 1.6rem;
+
+        background: url("/chain.svg") no-repeat right;
+        background-size: contain;
     }
 
     .list {
@@ -18,7 +23,7 @@
 
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     @media(min-width: 768px) {
