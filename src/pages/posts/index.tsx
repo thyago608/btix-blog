@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { Post } from "components/Post";
 import { IPost } from "types/Post";
 import styles from "./styles.module.scss";
-import { useState } from "react";
 
 interface PostsProps {
   postsList: IPost[];

@@ -58,7 +58,14 @@ export const getServerSideProps: GetServerSideProps =
     const post = await postFetch.json();
     const comments = await commentsFetch.json();
 
-    console.log(comments);
+    if (Object.keys(post).length === 0) {
+      return {
+        redirect: {
+          destination: "/posts",
+          permanent: false,
+        },
+      };
+    }
 
     return {
       props: {
