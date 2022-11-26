@@ -48,7 +48,9 @@ export default function Posts({ postsList }: PostsProps) {
         </header>
         <div className={styles.list}>
           {posts?.map((post) => (
-            <Post key={post.id} data={post} />
+            <div key={post.id} className={styles.postItem}>
+              <Post data={post} />
+            </div>
           ))}
         </div>
         <button

@@ -1,3 +1,4 @@
+import { Author } from "components/Author";
 import Link from "next/link";
 import { Hash } from "phosphor-react";
 import { IPost } from "types/Post";
@@ -9,12 +10,17 @@ interface PostProps {
 
 export function Post({ data }: PostProps) {
   return (
-    <Link href={`/post/${data.id}`} className={styles.post}>
-      <strong className={styles.title}>
-        <Hash size={20} weight="bold" />
-        {data.title}
-      </strong>
-      <p className={styles.content}>{data.body}</p>
-    </Link>
+    <div>
+      <Link
+        href={`/post/${data.id}`}
+        className={styles.post}>
+        <strong className={styles.title}>
+          <Hash size={20} weight="bold" />
+          {data.title}
+        </strong>
+        <p className={styles.content}>{data.body}</p>
+      </Link>
+      <Author userId={data.userId} />
+    </div>
   );
 }
