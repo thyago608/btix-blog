@@ -20,7 +20,7 @@ export function Post({ data }: PostProps) {
         </strong>
         <p className={styles.content}>{data.body}</p>
       </Link>
-      <Author userId={data.userId} />
+      <Author data={data.author} />
     </div>
   );
 }
