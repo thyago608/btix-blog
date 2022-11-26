@@ -63,10 +63,14 @@ describe("Component Header", () => {
 
     render(<Header />);
 
+    const homeLink = screen.getByRole("link", {
+      name: /home/i,
+    });
     const postsLink = screen.getByRole("link", {
       name: /posts/i,
     });
 
+    expect(homeLink).not.toHaveClass("active");
     expect(postsLink).toHaveClass("active");
   });
 });
