@@ -9,6 +9,25 @@
     }
 }
 
+.prevPage {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 0.5rem;
+
+    width: min-content;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+
+    color: var(--gray-100);
+    background: var(--gray-850);
+    font-weight: bold;
+
+    @media(min-width: 1024px) {
+        margin-top: 2rem;
+    }
+}
+
 .postSelected {
     margin: 3rem 0;
 }

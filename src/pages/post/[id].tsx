@@ -1,10 +1,12 @@
 import Head from "next/head";
+import { GetServerSideProps } from "next";
 import { Post as PostComponent } from "components/Post";
 import { Comment } from "components/Comment";
-import styles from "./styles.module.scss";
-import { GetServerSideProps } from "next";
 import { IPost } from "types/Post";
 import { IComment } from "types/Comment";
+import { ArrowLeft } from "phosphor-react";
+import styles from "./styles.module.scss";
+import Link from "next/link";
 
 interface PostProps {
   post: IPost;
@@ -20,6 +22,10 @@ export default function Post({
       <Head>
         <title>btix.blog | post</title>
       </Head>
+      <Link href="/posts" className={styles.prevPage}>
+        <ArrowLeft size={20} />
+        Voltar
+      </Link>
       <div className={styles.postSelected}>
         <PostComponent data={post} />
       </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Hash } from "phosphor-react";
 import { IPost } from "types/Post";
 import styles from "./styles.module.scss";
 
@@ -10,7 +11,7 @@ export function Post({ data }: PostProps) {
   return (
     <Link href={`/post/${data.id}`} className={styles.post}>
       <strong className={styles.title}>
-        <span>#</span>
+        <Hash size={20} weight="bold" />
         {data.title}
       </strong>
       <p className={styles.content}>{data.body}</p>

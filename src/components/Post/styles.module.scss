@@ -9,16 +9,17 @@
 .title {
     text-transform: capitalize;
 
-    span {
-        color: var(--purple);
-        font-size: 1.3rem;
+    display: flex;
+    gap: 0.3rem;
 
-        display: inline-block;
-        margin-right: 0.3rem;
+    svg {
+        color: var(--purple);
+        flex: none;
     }
 
     @media(min-width: 768px) {
         font-size: 1.1rem;
+        align-items: center;
     }
 
     @media(min-width: 1024px) {
