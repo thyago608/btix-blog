@@ -9,7 +9,10 @@ interface PostProps {
 export function Post({ data }: PostProps) {
   return (
     <Link href={`/post/${data.id}`} className={styles.post}>
-      <strong className={styles.title}>{data.title}</strong>
+      <strong className={styles.title}>
+        <span>#</span>
+        {data.title}
+      </strong>
       <p className={styles.content}>{data.body}</p>
     </Link>
   );

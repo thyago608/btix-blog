@@ -1,27 +1,28 @@
 import Image from "next/image";
+import { IComment } from "types/Comment";
 import styles from "./styles.module.scss";
 
-export function Comment() {
+interface CommentProps {
+  data: IComment;
+}
+
+export function Comment({ data }: CommentProps) {
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
         <Image
-          src="https://github.com/thyago608.png"
+          src="https://www.svgrepo.com/show/415145/avatar-boy-male-3.svg"
           alt=""
           width={50}
           height={50}
           className={styles.avatar}
         />
         <div className={styles.userInformation}>
-          <strong>Thyago Ribeiro</strong>
-          <span>thyagoribeiro608@gmail.com</span>
+          <strong>{data.name}</strong>
+          <span>{data.email}</span>
         </div>
       </div>
-      <p className={styles.comment}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing
-        elit. Ad, saepe! Aspernatur, blanditiis explicabo
-        delectus accusantium repellendus eius neque ut.
-      </p>
+      <p className={styles.comment}>{data.body}</p>
     </div>
   );
 }
