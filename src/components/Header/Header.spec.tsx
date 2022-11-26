@@ -73,4 +73,14 @@ describe("Component Header", () => {
     expect(homeLink).not.toHaveClass("active");
     expect(postsLink).toHaveClass("active");
   });
+
+  it("should go to the homepage when clicking on the logo", () => {
+    render(<Header />);
+
+    const logo = screen.getByRole("link", {
+      name: /btix/i,
+    });
+
+    expect(logo).toHaveAttribute("href", "/");
+  });
 });
