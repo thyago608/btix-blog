@@ -1,7 +1,6 @@
 import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { IUser } from "../../types/User";
-
 import { Author } from ".";
 
 const author: IUser = {
@@ -14,7 +13,7 @@ const author: IUser = {
   },
 };
 
-describe("Component Post", () => {
+describe("Component Author", () => {
   it("should render correctly", () => {
     render(<Author data={author} />);
 
