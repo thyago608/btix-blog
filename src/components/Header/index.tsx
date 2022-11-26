@@ -16,12 +16,12 @@ export function Header() {
           <Link
             href="/"
             className={asPath === "/" ? styles.active : ""}>
-            Home
+            home
           </Link>
           <Link
             href="/posts"
             className={asPath !== "/" ? styles.active : ""}>
-            Posts
+            posts
           </Link>
         </nav>
       </div>
