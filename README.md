@@ -16,6 +16,7 @@ Você ficou responsável pela demanda e sua tarefa é projetar uma interface par
 Acesso aos endpoints da api de consulta:<br>
 https://docs.google.com/document/d/1zQcx1-cLA0UNoqIrcfVUjWEXFJfCHL41GVoAlpWea8k/edit
 
+<br>
 
 ## Desenvolvimento
 
