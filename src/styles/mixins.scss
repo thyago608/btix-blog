@@ -1,0 +1,15 @@
+@keyframes animation {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@mixin translateAnimation {
+    animation: animation 0.5s backwards;
+}

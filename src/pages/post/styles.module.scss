@@ -1,3 +1,5 @@
+@import "../../styles/mixins.scss";
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -30,9 +32,12 @@
 
 .postSelected {
     margin: 3rem 0;
+    @include translateAnimation;
 }
 
 .comments {
+    @include translateAnimation;
+
     .list {
         margin-top: 2rem;
 
