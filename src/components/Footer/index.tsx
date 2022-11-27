@@ -4,7 +4,6 @@ import { CaretUp } from "phosphor-react";
 export function Footer() {
   function handleScrollUp() {
     const htmlTagRoot = document.querySelector("html");
-
     htmlTagRoot?.scrollTo({
       top: 0,
       left: 0,
