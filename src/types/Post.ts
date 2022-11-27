@@ -6,4 +6,6 @@ export interface IPost {
     title: string;
     body: string;
     author: IUser;
-  }
+}
+
+export type IPostResponse = Omit<IPost, "author"> 

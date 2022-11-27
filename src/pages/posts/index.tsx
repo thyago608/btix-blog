@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { Post } from "components/Post";
-import { IPost } from "types/Post";
+import { IPost, IPostResponse } from "types/Post";
 import { IUser } from "types/User";
 import styles from "./styles.module.scss";
 
@@ -76,7 +76,7 @@ export const getServerSideProps: GetServerSideProps =
       "https://jsonplaceholder.typicode.com/users"
     );
 
-    const posts: IPost[] = await fetchPosts.json();
+    const posts: IPostResponse[] = await fetchPosts.json();
     const users: IUser[] = await fetchUsers.json();
 
     const postsList = posts.map((post) => {

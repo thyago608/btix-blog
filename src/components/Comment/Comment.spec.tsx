@@ -1,7 +1,6 @@
 import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { IComment } from "../../types/Comment";
-
 import { Comment } from ".";
 
 const comment: IComment = {
