@@ -5,8 +5,10 @@ import { Comment } from "components/Comment";
 import { IPost } from "types/Post";
 import { IComment } from "types/Comment";
 import { ArrowLeft } from "phosphor-react";
-import styles from "./styles.module.scss";
 import Link from "next/link";
+import { fetchPostID } from "utils/fetchPostID";
+import { fetchComments } from "utils/fetchComments";
+import styles from "./styles.module.scss";
 
 interface PostProps {
   post: IPost;
@@ -46,17 +48,10 @@ export default function Post({
 export const getServerSideProps: GetServerSideProps =
   async (request) => {
     const { params } = request;
-
-    const postFetch = await fetch(
-      `https://jsonplaceholder.typicode.com/posts/${params?.id}`
+    const post = await fetchPostID(Number(params?.id));
+    const comments = await fetchComments(
+      Number(params?.id)
     );
-
-    const commentsFetch = await fetch(
-      `https://jsonplaceholder.typicode.com/posts/${params?.id}/comments`
-    );
-
-    const post = await postFetch.json();
-    const comments = await commentsFetch.json();
 
     if (Object.keys(post).length === 0) {
       return {

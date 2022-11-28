@@ -31,7 +31,7 @@ const postsList = [
   },
 ];
 
-describe("Component Post Page", () => {
+describe("Component Posts Page", () => {
   it("should be render correctly", () => {
     render(<Posts postsList={postsList} />);
 
