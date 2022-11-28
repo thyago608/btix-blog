@@ -84,4 +84,7 @@ Foram desenvolvidos testes unitários.<br><br>
 ```
 <br>
 
+## Visite
+[Btix-Blog](https://btix-blog-608.vercel.app/)
+
 Desenvolvido por Thyago Ribeiro 👋
