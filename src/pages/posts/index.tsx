@@ -2,8 +2,9 @@ import { useState } from "react";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import { Post } from "components/Post";
-import { IPost, IPostResponse } from "types/Post";
-import { IUser } from "types/User";
+import { IPost } from "types/Post";
+import { fetchPosts } from "utils/fetchPosts";
+import { fetchUsers } from "utils/fetchUsers";
 import styles from "./styles.module.scss";
 
 interface PostsProps {
@@ -68,16 +69,8 @@ export default function Posts({ postsList }: PostsProps) {
 
 export const getServerSideProps: GetServerSideProps =
   async () => {
-    const fetchPosts = await fetch(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
-
-    const fetchUsers = await fetch(
-      "https://jsonplaceholder.typicode.com/users"
-    );
-
-    const posts: IPostResponse[] = await fetchPosts.json();
-    const users: IUser[] = await fetchUsers.json();
+    const posts = await fetchPosts();
+    const users = await fetchUsers();
 
     const postsList = posts.map((post) => {
       return {

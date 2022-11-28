@@ -2,7 +2,7 @@ import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Home from "../../pages";
 
-describe("Component Home", () => {
+describe("Component Home Page", () => {
   it("should render correctly", () => {
     render(<Home />);
 
